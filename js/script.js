@@ -1,8 +1,4 @@
 
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-
-
 /*array of objects with random quotes*/
 var quotes =
 [
@@ -23,6 +19,24 @@ var quotes =
      `quotes` array.
 ***/
 
+//Function retrieves a quote by picking a random number and using it as a the index of the array of quotes
+function getRandomQuote()
+{
+  var random = Math.floor(Math.random() * 7);
+  var sentence = quotes[random].quote;
+  var sources = quotes[random].source;
+  quotes[random].year;
+  if(quotes[random].year)
+  {
+    var year = quotes[random].year;
+    return sentence + "  -" + sources + ", " + year;
+  }
+  else
+   {
+    return sentence + "  -" + sources ;
+  }
+
+};
 
 
 
@@ -47,7 +61,4 @@ var quotes =
 ***/
 
 
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
+//document.getElementById('loadQuote').addEventListener("click", printQuote, false);
