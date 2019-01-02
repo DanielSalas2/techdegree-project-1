@@ -10,32 +10,12 @@ var quotes =
   {quote: "If you're not gonna go ALL the way, why go at all?", source:"Joe Namath", year:"1965"},
   {quote: "Success isn’t owned. It’s leased, and rent is due every day.", source:"J.J. Watt"}
 ];
-
-
-/***
-  Create the `getRandomQuote` function to:
-   - generate a random number
-   - use the random number to `return` a random quote object from the
-     `quotes` array.
-***/
-
 //Function retrieves a quote by picking a random number and using it as a the index of the array of quotes
 function getRandomQuote()
 {
   var random = Math.floor(Math.random() * 7);
-  var sentence = quotes[random].quote;
-  var sources = quotes[random].source;
-  quotes[random].year;
-  if(quotes[random].year)
-  {
-    var year = quotes[random].year;
-    return sentence + "  -" + sources + ", " + year;
-  }
-  else
-   {
-    return sentence + "  -" + sources ;
-  }
-
+  var randoQuote = quotes[random];
+  return randoQuote;
 };
 
 
